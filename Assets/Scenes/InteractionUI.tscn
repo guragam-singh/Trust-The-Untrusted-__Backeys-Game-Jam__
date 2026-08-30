@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://rkot87hdwrjh"]
+
+[ext_resource type="Script" uid="uid://bkdkbc6k4uo7" path="res://Assets/Scripts/InteractionUI.gd" id="1_pl2f7"]
+[ext_resource type="AudioStream" uid="uid://cf1wg15m382mm" path="res://Assets/Sounds/Interact.mp3" id="2_r4y83"]
+[ext_resource type="Texture2D" uid="uid://ckmpj61xrm6eg" path="res://Assets/UI/INTECATION MENU.png" id="3_ajo8d"]
+
+[node name="InteractionUI" type="CanvasLayer" unique_id=550816394]
+script = ExtResource("1_pl2f7")
+
+[node name="InteractSound" type="AudioStreamPlayer2D" parent="." unique_id=1241778978]
+position = Vector2(0, 449)
+stream = ExtResource("2_r4y83")
+
+[node name="Panel" type="Panel" parent="." unique_id=1187889580]
+custom_minimum_size = Vector2(600, 200)
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0015432
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpButton" type="Button" parent="Panel" unique_id=1308203727]
+light_mask = 512
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.11100001
+anchor_right = 0.25
+anchor_bottom = 0.11100001
+offset_left = 614.0
+offset_top = 102.799995
+offset_right = 802.0
+offset_bottom = 157.8
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 53
+
+[node name="RefuseButton" type="Button" parent="Panel" unique_id=268539796]
+light_mask = 512
+layout_mode = 0
+offset_left = 902.0
+offset_top = 48.0
+offset_right = 1091.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 53
+
+[node name="IntecationMenu" type="Sprite2D" parent="Panel" unique_id=466664886]
+modulate = Color(1, 1, 1, 0.80784315)
+self_modulate = Color(1, 1, 1, 0.8117647)
+position = Vector2(578, 105.5)
+scale = Vector2(1, 0.940909)
+texture = ExtResource("3_ajo8d")
+
+[node name="NameLabel" type="Label" parent="Panel" unique_id=1637123917]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 18.0
+offset_right = 281.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.8039216)
+theme_override_font_sizes/font_size = 40
+text = "Salesman"
+
+[node name="AskLabel" type="Label" parent="Panel" unique_id=1778419228]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 67.0
+offset_right = 860.0608
+offset_bottom = 139.65366
+scale = Vector2(1.0282829, 1.1699339)
+theme_override_colors/font_color = Color(1, 1, 1, 0.80784315)
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3

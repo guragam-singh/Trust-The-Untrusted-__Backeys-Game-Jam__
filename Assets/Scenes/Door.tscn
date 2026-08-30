@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cvru3a1wuua8a"]
+
+[ext_resource type="Script" uid="uid://d1tfajn8ymwia" path="res://Assets/Scripts/Door.gd" id="1_i4u2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apsbx"]
+size = Vector2(20, 168)
+
+[node name="Node2D" type="Area2D" unique_id=599882009]
+script = ExtResource("1_i4u2u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1694347567]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=136514863]
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_apsbx")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1342845753]
+visible = false
+offset_right = 62.0
+offset_bottom = 75.0
+text = "Press E to Interact"
+horizontal_alignment = 1
+autowrap_mode = 3

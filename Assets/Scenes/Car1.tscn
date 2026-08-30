@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bmn5iogy2b6b8"]
+
+[ext_resource type="PackedScene" uid="uid://xg202esy5ldu" path="res://Assets/Scenes/CarBase1.tscn" id="1_87tc3"]
+[ext_resource type="PackedScene" uid="uid://bbhdnc5ecblv3" path="res://Assets/Scenes/vendor.tscn" id="2_a01br"]
+[ext_resource type="PackedScene" uid="uid://bgwf3p6h8jnui" path="res://Assets/Scenes/twins.tscn" id="3_ywef0"]
+[ext_resource type="PackedScene" uid="uid://cvru3a1wuua8a" path="res://Assets/Scenes/Door.tscn" id="4_a01br"]
+
+[node name="Node2D" unique_id=482579058 instance=ExtResource("1_87tc3")]
+
+[node name="NPC" parent="." index="7" unique_id=431923503 instance=ExtResource("2_a01br")]
+position = Vector2(-203, -123)
+
+[node name="NPC2" parent="." index="8" unique_id=1017896790 instance=ExtResource("3_ywef0")]
+position = Vector2(165, 62)
+
+[node name="SpawnFromCar2" type="Marker2D" parent="." index="9" unique_id=793082225]
+position = Vector2(295, -30)
+
+[node name="Node2D" parent="." index="10" unique_id=700970212 instance=ExtResource("4_a01br")]
+position = Vector2(320, -38)
+target_scene = "res://Assets/Scenes/Car2.tscn"
+target_spawn_point = "SpawnFromCar1"

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://darkhd14srj56"]
+
+[ext_resource type="PackedScene" uid="uid://xg202esy5ldu" path="res://Assets/Scenes/CarBase1.tscn" id="1_k8oao"]
+[ext_resource type="PackedScene" uid="uid://ch6ihsckwj47s" path="res://Assets/Scenes/smiling_man.tscn" id="2_d7xw8"]
+[ext_resource type="PackedScene" uid="uid://dahqa4s2epyw1" path="res://Assets/Scenes/guard.tscn" id="3_2srvh"]
+[ext_resource type="PackedScene" uid="uid://dju1ndjok6sy2" path="res://Assets/Scenes/ExitGate.tscn" id="4_d7xw8"]
+[ext_resource type="PackedScene" uid="uid://cvru3a1wuua8a" path="res://Assets/Scenes/Door.tscn" id="5_2srvh"]
+
+[node name="Node2D" unique_id=482579058 instance=ExtResource("1_k8oao")]
+
+[node name="NPC" parent="." index="7" unique_id=431923503 instance=ExtResource("2_d7xw8")]
+position = Vector2(131, -187)
+
+[node name="NPC2" parent="." index="8" unique_id=1968659541 instance=ExtResource("3_2srvh")]
+position = Vector2(-168, 52)
+
+[node name="Node2D" parent="." index="9" unique_id=1567780001 instance=ExtResource("4_d7xw8")]
+position = Vector2(312, -36)
+
+[node name="Node2D2" parent="." index="10" unique_id=599882009 instance=ExtResource("5_2srvh")]
+position = Vector2(-295, -37)
+target_scene = "res://Assets/Scenes/Car4.tscn"
+target_spawn_point = "SpawnFromCar5"
+
+[node name="SpawnFromCar4" type="Marker2D" parent="." index="11" unique_id=298001917]
+position = Vector2(-254, -21)

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bufl6mmuhphpl"]
+
+[ext_resource type="Script" uid="uid://b3tir77pd8ssn" path="res://Assets/Scripts/SceneTransition.gd" id="1_dgsrw"]
+[ext_resource type="AudioStream" uid="uid://bg44qgqpi10dj" path="res://Assets/Sounds/DoorOpening.mp3" id="2_57qbj"]
+
+[node name="SceneTransition" type="CanvasLayer" unique_id=355052247]
+script = ExtResource("1_dgsrw")
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=168478013]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="FadeRect2" type="ColorRect" parent="." unique_id=2056291429]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="DoorSound" type="AudioStreamPlayer2D" parent="." unique_id=1573569459]
+stream = ExtResource("2_57qbj")
+volume_db = -6.5

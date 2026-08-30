@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://ch6ihsckwj47s"]
+
+[ext_resource type="Script" uid="uid://bp6kurrca5nw5" path="res://Assets/Scripts/NPC.gd" id="1_0ft00"]
+[ext_resource type="Texture2D" uid="uid://drilykg1ij8tu" path="res://Assets/Sprite/NPC/NPC2_idle_forward1(B).png" id="2_0ft00"]
+[ext_resource type="Texture2D" uid="uid://bccllihqjk6c3" path="res://Assets/Sprite/NPC/NPC2_idle_forward2(B).png" id="3_kobgl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0b2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0ft00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kobgl")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrmv2"]
+size = Vector2(263, 195)
+
+[node name="NPC" type="Node2D" unique_id=431923503]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1474343581]
+script = ExtResource("1_0ft00")
+npc_id = "smiling_man"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=291763633]
+position = Vector2(9.000002, 16.000006)
+scale = Vector2(2.1285713, 1.9857143)
+sprite_frames = SubResource("SpriteFrames_g0b2x")
+animation = &"idle"
+frame_progress = 0.2302671
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1312925246]
+position = Vector2(10, 20)
+shape = SubResource("RectangleShape2D_wrmv2")
+
+[node name="PromptLabel" type="Label" parent="Area2D" unique_id=1682941204]
+offset_left = 44.0
+offset_top = -64.0
+offset_right = 119.0
+offset_bottom = -34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Press E"

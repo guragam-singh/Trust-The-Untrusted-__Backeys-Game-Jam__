@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bapjscksnb0k6"]
+
+[ext_resource type="Script" uid="uid://bp6kurrca5nw5" path="res://Assets/Scripts/NPC.gd" id="1_jld1n"]
+[ext_resource type="Texture2D" uid="uid://0jhxspriomne" path="res://Assets/Sprite/NPC/NPC3_idle_right1(B).png" id="2_dmndv"]
+[ext_resource type="Texture2D" uid="uid://bjvggh2kq5104" path="res://Assets/Sprite/NPC/NPC3_idle_right2(B) .png" id="3_a757h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0b2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dmndv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a757h")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrmv2"]
+size = Vector2(132, 98)
+
+[node name="NPC" type="Node2D" unique_id=431923503]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1474343581]
+script = ExtResource("1_jld1n")
+npc_id = "conductor_aide"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=291763633]
+position = Vector2(8, 8)
+scale = Vector2(1.2285714, 1.2285714)
+sprite_frames = SubResource("SpriteFrames_g0b2x")
+animation = &"idle"
+frame_progress = 0.2302671
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1312925246]
+position = Vector2(14, 6)
+shape = SubResource("RectangleShape2D_wrmv2")
+
+[node name="PromptLabel" type="Label" parent="Area2D" unique_id=1682941204]
+offset_left = 22.0
+offset_top = -47.0
+offset_right = 88.0
+offset_bottom = -22.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Press E"

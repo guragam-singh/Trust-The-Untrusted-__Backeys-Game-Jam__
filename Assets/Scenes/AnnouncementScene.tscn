@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://40ds2dkl2esl"]
+
+[ext_resource type="Script" uid="uid://dx3iy78ortyhb" path="res://Assets/Scripts/AnnouncementScene.gd" id="1_2cuel"]
+[ext_resource type="VideoStream" uid="uid://d0hoq1jjsbws0" path="res://Assets/UI/Annoucement11.ogv" id="2_81ake"]
+
+[node name="Control" type="Control" unique_id=984191796]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2cuel")
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1655283001]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -204.0
+offset_right = 1676.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8069172, 0.60054535)
+stream = ExtResource("2_81ake")
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=1660830905]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.003921569)

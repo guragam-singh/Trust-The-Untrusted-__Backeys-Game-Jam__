@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://1viv5a4x6724"]
+
+[ext_resource type="PackedScene" uid="uid://xg202esy5ldu" path="res://Assets/Scenes/CarBase1.tscn" id="1_433ko"]
+[ext_resource type="PackedScene" uid="uid://bghb8uq0p6wru" path="res://Assets/Scenes/blue_jacket_boy.tscn" id="2_5c0y4"]
+[ext_resource type="PackedScene" uid="uid://bikxffdmp3h48" path="res://Assets/Scenes/injured_man.tscn" id="3_y86r5"]
+[ext_resource type="PackedScene" uid="uid://d4dcq011gmb55" path="res://Assets/Scenes/knitting_woman.tscn" id="4_0mkhm"]
+[ext_resource type="PackedScene" uid="uid://bgb5wv2ggesyd" path="res://Assets/Scenes/LockedCompartment.tscn" id="5_5c0y4"]
+[ext_resource type="PackedScene" uid="uid://cvru3a1wuua8a" path="res://Assets/Scenes/Door.tscn" id="6_y86r5"]
+
+[node name="Node2D" unique_id=482579058 instance=ExtResource("1_433ko")]
+
+[node name="NPC" parent="." index="7" unique_id=431923503 instance=ExtResource("2_5c0y4")]
+position = Vector2(167, 68)
+
+[node name="NPC2" parent="." index="8" unique_id=2143827528 instance=ExtResource("3_y86r5")]
+position = Vector2(-202, 61)
+
+[node name="NPC3" parent="." index="9" unique_id=1350113427 instance=ExtResource("4_0mkhm")]
+position = Vector2(164, -143)
+
+[node name="Node2D" parent="." index="10" unique_id=1780816627 instance=ExtResource("5_5c0y4")]
+position = Vector2(15, -132)
+
+[node name="SpawnFromCar3" type="Marker2D" parent="." index="11" unique_id=1701971158]
+position = Vector2(-272, -13)
+
+[node name="Node2D2" parent="." index="12" unique_id=599882009 instance=ExtResource("6_y86r5")]
+position = Vector2(-300, -36)
+target_scene = "res://Assets/Scenes/Car3.tscn"
+target_spawn_point = "SpawnFromCar4"
+
+[node name="Node2D3" parent="." index="13" unique_id=1062989966 instance=ExtResource("6_y86r5")]
+position = Vector2(313, -36)
+target_scene = "res://Assets/Scenes/Car5.tscn"
+target_spawn_point = "SpawnFromCar4"
+
+[node name="SpawnFromCar5" type="Marker2D" parent="." index="14" unique_id=887826553]
+position = Vector2(271, -7)

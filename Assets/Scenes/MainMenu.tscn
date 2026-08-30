@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bwhp1sk8goxrr"]
+
+[ext_resource type="Script" uid="uid://du6yf6h0qexyj" path="res://Assets/Scripts/MainMenu.gd" id="1_hywc3"]
+[ext_resource type="VideoStream" uid="uid://c3coy4vffjdkp" path="res://Assets/UI/main-menu.ogv" id="2_pi1tf"]
+[ext_resource type="AudioStream" uid="uid://ecxmouenawiv" path="res://Assets/Sounds/MenuSound.mp3" id="3_ldl0q"]
+
+[node name="MainMenu" type="Control" unique_id=454680186]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_hywc3")
+
+[node name="StartButton" type="Button" parent="." unique_id=1221275648]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 166.0
+offset_right = 310.0
+offset_bottom = 243.0
+
+[node name="QuitButton" type="Button" parent="." unique_id=592593774]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 416.0
+offset_right = 310.0
+offset_bottom = 485.0
+
+[node name="VideoBackground" type="VideoStreamPlayer" parent="." unique_id=647363713]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.99999905
+offset_right = 1879.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5984302, 0.60367376)
+mouse_filter = 2
+stream = ExtResource("2_pi1tf")
+volume_db = 0.2800004
+autoplay = true
+loop = true
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=2027411983]
+stream = ExtResource("3_ldl0q")

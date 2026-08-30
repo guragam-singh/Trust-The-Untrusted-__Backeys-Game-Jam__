@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bghb8uq0p6wru"]
+
+[ext_resource type="Script" uid="uid://bp6kurrca5nw5" path="res://Assets/Scripts/NPC.gd" id="1_oey3d"]
+[ext_resource type="Texture2D" uid="uid://drilykg1ij8tu" path="res://Assets/Sprite/NPC/NPC2_idle_forward1(B).png" id="2_adfe8"]
+[ext_resource type="Texture2D" uid="uid://bccllihqjk6c3" path="res://Assets/Sprite/NPC/NPC2_idle_forward2(B).png" id="3_miqxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrmv2"]
+size = Vector2(97, 92)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0b2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_adfe8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_miqxx")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="NPC" type="Node2D" unique_id=431923503]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1474343581]
+script = ExtResource("1_oey3d")
+npc_id = "blue_jacket_boy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1312925246]
+position = Vector2(-0.5, -12)
+shape = SubResource("RectangleShape2D_wrmv2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=291763633]
+position = Vector2(0, -7)
+scale = Vector2(1.0142857, 0.9714286)
+sprite_frames = SubResource("SpriteFrames_g0b2x")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.2302671
+
+[node name="PromptLabel" type="Label" parent="Area2D" unique_id=1682941204]
+offset_left = 14.0
+offset_top = -50.0
+offset_right = 69.0
+offset_bottom = -27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Press E"

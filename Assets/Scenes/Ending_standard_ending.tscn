@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://bk73grd41dv42"]
+
+[ext_resource type="Script" uid="uid://de7qmmoyug0pl" path="res://Assets/Scripts/Ending_executed_anomaly.gd" id="1_1qxch"]
+[ext_resource type="AudioStream" uid="uid://loeiix11nx8j" path="res://Assets/Sounds/OutroMusic.mp3" id="2_y2k60"]
+[ext_resource type="Texture2D" uid="uid://bhcpi7ymktacd" path="res://Assets/UI/WON NEW.png" id="3_1qxch"]
+[ext_resource type="FontFile" uid="uid://36t12epxj6jw" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="4_bgjev"]
+[ext_resource type="FontFile" uid="uid://bundjwistw8l7" path="res://Assets/Fonts/PixelOperator8.ttf" id="4_y2k60"]
+
+[node name="EndingScreen" type="Control" unique_id=297485031]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1qxch")
+narration_lines = Array[String](["The door gives way. Cold air, open fields, no train behind you but silence.\", \"You made it. Not everyone did. You'll never know why some of them were fine and some of them weren't.\", \"That's the part that bothers you.\""])
+final_voice_line = "\"Sufficient cooperation confirmed. Everything is fine. Everything was always fine.\""
+line_display_delay = 3.0
+ending_music = ExtResource("2_y2k60")
+
+[node name="RestartButton" type="Button" parent="." unique_id=874081922]
+layout_mode = 0
+offset_left = 57.999985
+offset_top = 537.0
+offset_right = 666.1041
+offset_bottom = 714.87415
+scale = Vector2(0.37329137, 0.3485612)
+theme_override_font_sizes/font_size = 58
+autowrap_mode = 3
+
+[node name="MenuButton" type="Button" parent="." unique_id=2038247274]
+layout_mode = 0
+offset_left = 892.00006
+offset_top = 530.0
+offset_right = 939.74457
+offset_bottom = 561.0
+scale = Vector2(4.6288023, 2.1542675)
+
+[node name="DarkOverlay" type="ColorRect" parent="." unique_id=1676255406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -45.0
+offset_right = -11.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.003921569)
+
+[node name="Background" type="TextureRect" parent="." unique_id=41901589]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = 747.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6069316, 0.59958714)
+mouse_filter = 2
+texture = ExtResource("3_1qxch")
+stretch_mode = 6
+
+[node name="NarrationLabel" type="Label" parent="." unique_id=1372355385]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 287.0
+offset_right = 964.0
+offset_bottom = 434.0
+theme_override_fonts/font = ExtResource("4_y2k60")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=122888612]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 98.0
+offset_right = 906.0
+offset_bottom = 181.0
+theme_override_colors/font_color = Color(1, 0.87058824, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("4_bgjev")
+theme_override_font_sizes/font_size = 40
+text = "6
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="EndingMusic" type="AudioStreamPlayer2D" parent="." unique_id=349070080]
+stream = ExtResource("2_y2k60")
+
+[node name="AnomalyLabel" type="Label" parent="." unique_id=1993089056]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 181.0
+offset_right = 970.0
+offset_bottom = 221.0
+theme_override_colors/font_color = Color(1, 0.87058824, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("4_bgjev")
+theme_override_font_sizes/font_size = 40
